@@ -5,9 +5,8 @@ $('#btn').click(function(){
 })
 
 
-var salvarFilmes = "";
 
-function buscaFilme(busca){
+function buscaFilme(){
 
 
     var busca = $('#busca').val()
@@ -20,29 +19,29 @@ function buscaFilme(busca){
     
          'success': function(results)
           {   
-           console.log(results.Search[0])
-           buscaDados(results)
-           mostra()
+            console.log(results)
+            var filmes = results.Search;
+
+            var salvarFilmes = "";
+           
             try{
-                let filmes = results.Search;
-                var salvarFilmes = "";
                 
+
+    
     
                 $.each(filmes, (index, filme)=>{
+                    
                     salvarFilmes +=
                     `    
-                    <h5>${filme.Title}<h5>
+                    <h1>${filme.Title}</h1>
                     <img src= "${filme.Poster}">
-
+                
                    `
-
                 })
-                
-                
+                                
                 $('#filmes').html(` ${salvarFilmes}`)
                 
-   
-                
+      
                 if(results.Response=== "False"){
 
 
@@ -64,17 +63,68 @@ function buscaFilme(busca){
                 console.log(err)
             }
            
-         },
-
-         
-})
-                
+         }      
+})               
 }
 
-function buscaDados(results){
 
 
-    let dados ={
+
+$('.filmes').click(function () {
+
+    var busca = $('#busca').val()
+    var url = "http://www.omdbapi.com/?apikey=f5e93ab6&s="
+
+    $.ajax({
+
+        'url': url+busca ,
+
+
+        'success': function(results)
+        {   
+            let filmes = results.Search;
+            let salvamovie = "";
+            const indice = $(this).data('indice')
+
+            $('#myModal').modal('show')
+
+           
+
+        }
+     
+    })
+
+})
+
+
+function criarObjeto(busca){
+
+    var busca = $('#busca').val()
+    var url = "http://www.omdbapi.com/?apikey=f5e93ab6&s="
+
+    $.ajax({
+
+        'url': url+busca ,
+
+
+        'success': function(results)
+        {   
+            const filme = dados(results)
+            mostra(filme)
+        }
+     
+    })
+}
+
+
+
+
+function dados(results){
+
+
+    return {
+
+        img: results.Poster,
         Nome: results.name,
         Ano: results.Year,
         Lançamento: results.Released,
@@ -85,19 +135,18 @@ function buscaDados(results){
 
     }  
    
-    return dados
 }
 
-function mostra(results){
+function mostra(filme) {
 
-    $('#Nome').text(results.name)
-    $('#Ano').text(results.Year)
-    $('#Nome').text(results.Released)
-    $('#Nome').text(results.Runtime)
-    $('#Nome').text(results.Genre)
-    $('#Nome').text(results.Director)
-    $('#Nome').text(results.imdbRating)
-
+    $('.nome').text(filme.nome)
+    $('.foto').attr("src", filme.img)
+    $('.ano').text(filme.ano)
+    $('.lancamento').text(filme.lancamento)
+    $('.genero').text(filme.genero)
+    $('.duracao').text(filme.duracao)
+    $('.diretor').text(filme.diretor)
+    $('.nota').text(filme.nota)
 }
 
 

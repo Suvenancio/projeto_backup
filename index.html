@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="resiliaflix.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <title>ResiliaFlix</title>
 </head>
 <body>
@@ -13,26 +15,43 @@
     </header>
 
     <main>
-        <div class="container id-flex">
-            
-            <div id="filmes" class="filmes"></div>
+        
+        <div id="filmes" class="filmes">
 
         </div>
+        
 
-        <p id="Nome">Nome:</p>
-        <p id="Ano">Ano</p>
-        <p id="Lançamento">Lançamento</p>
-        <p id="Duração">Duração</p>
-        <p id="Gênero">Gênero</p>
-        <p id="Diretor">Diretor</p>
-        <p id="Nota">Nota</p>
+       
 
-  
+        <did class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content" id="modalContent">
+                                <div class="modal-header">
+                                    <h3>Título: <span class="nome"></span></h3>
+                                </div>
+                                <div class="modal-body">
+                                      <img class="foto" src="" alt="" />
+                                      <p>Ano: <span class="ano"></span></p>
+                                      <p>Data de Lançamento: <span class="lancamento"></span></p>
+                                      <p>Duração: <span class="duracao"></span></p>
+                                      <p>Gênero: <span class="genero"></span></p>
+                                      <p>Diretor: <span class="diretor"></span></p>
+                                      <p>Metacritic: <span class="nota"></span></p>                          
+                                </div>
+                                <div class="modal-footer">
+                                    <input class="btn btn-default" data-dismiss="modal" value="Fechar">
+                                </div>
     </main>
 
     
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
     <script src="resiliaflix.js"></script>
 
 </body>
