@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css-reset/reset.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap-5.0.0-dist/css/bootstrap.min.css">
+    
+    <title>Document</title>
+</head>
+<body onload="requisicao()" class="body">
+  
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+        <div class="container-fluid">
+
+          <a class="logo" href="#">Resilia Flix</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" >Início</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Cadastrar</a>
+              </li>
+
+              
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Login</a>
+              </li>
+
+            </ul>
+
+            <form class="d-flex">
+
+                <!--input de procurar caso precise usar no js-->
+              <input class="form-control me-2" type="search" placeholder="Encontre seu Filme" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Procurar</button>
+
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <section id="todosfilmes" class="container">
+        <div class="row">
+        <div id="filmesexterna" class="col">
+            <div id="filmes0" class="filmes" data-indice="0"></div>
+            <div id="filmes1" class="filmes" data-indice="1"></div>
+            <div id="filmes2" class="filmes" data-indice="2"></div>
+            <div id="filmes3" class="filmes" data-indice="3"></div>
+        </div>
+        <div id="filmesexterna" class="col"> 
+            <div id="filmes4" class="filmes" data-indice="4"></div>
+            <div id="filmes5" class="filmes" data-indice="5"></div>
+            <div id="filmes6" class="filmes" data-indice="6"></div>
+            <div id="filmes7" class="filmes" data-indice="7"></div>
+        </div>
+        <div id="filmesexterna" class="col">
+            <div id="filmes8" class="filmes" data-indice="8"></div>
+            <div id="filmes9" class="filmes" data-indice="9"></div>
+            <div id="filmes10" class="filmes" data-indice="10"></div>
+            <div id="filmes11" class="filmes" data-indice="11"></div>
+        </div>
+        </div>
+    </section>
+   
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="modal fade" id="myModal">
+                  <div class="modal-dialog">
+                      <div class="modal-content" id="modalContent">
+                          <div class="modal-header">
+                              <h3>Título: <span class="nome"></span></h3>
+                          </div>
+                          <div class="modal-body">
+                                <img class="foto" src="" alt="" />
+                                <p>Ano: <span class="ano"></span></p>
+                                <p>Data de Lançamento: <span class="lancamento"></span></p>
+                                <p>Duração: <span class="duracao"></span></p>
+                                <p>Gênero: <span class="genero"></span></p>
+                                <p>Diretor: <span class="diretor"></span></p>
+                                <p>Metacritic: <span class="nota"></span></p>                          
+                          </div>
+                          <div class="modal-footer">
+                              <input class="btn btn-default" data-dismiss="modal" value="Fechar">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+   
+
+    <script src="./bootstrap-5.0.0-dist/js/bootstrap.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

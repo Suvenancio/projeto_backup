@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    background-color: teal;
+}
+
+.container-fluid{
+    background-color: rgb(49, 49, 49);
+    height: 80px;
+    
+}
+.container-fluid > .logo{
+    text-decoration: none;
+    font-size: 22px;
+    color: whitesmoke;
+}
+.navbar-nav.me-auto.mb-2.mb-lg-0 li a{
+    color: whitesmoke;
+    font-family: monospace;
+    margin-left: 60px;       
+    
+}
+.form-control.me-2{
+    font-family: monospace;
+}
+.btn.btn-outline-success{
+    background-color: black;
+    border: none;
+    color: whitesmoke;
+
+}
+
+.modal-header{
+    text-align: center;
+
+}
+.modal-body{
+    margin: 0 auto;
+}
+.imagem{
+    width: 250px;
+    height: 350px;
+    margin:10px;
+    border: 10px solid rgb(15, 15, 15)
+}
+.foto{
+    width: 200px;
+    height: 300px;
+    margin:10px;
+    border: 5px solid rgb(77, 75, 75);
+}
