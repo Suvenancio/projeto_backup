@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Recupere sua Senha</title>
+</head>
+<body>
+    <h1>Recupere sua senha</h1>
+
+    <form class="recuperacao">
+        <p>Um link será enviado para o email informado abaixo com as instruções para recuperar sua senha.</p>
+
+        <label for="email">Informe seu email:</label>
+        <input type="text" name="email" class="email" id="email">
+    </form>
+
+    <div id="mensagem" class="mensagem"></div>
+
+    <button class="botao-recup" id="botao-recup">Confirmar</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="recuperacao.js"></script>
+</body>
+</html>

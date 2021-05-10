@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Faça seu cadastro.</h1>
+    
+    <form class="dados-pessoais">
+        <h3>Dados Pessoais:</h3>
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" class="nome" id="nome">
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" class="sobrenome" id="sobrenome">
+
+        <label for="rg">RG:</label>
+        <input type="text" placeholder="XX.XXX.XXX-X" name="rg" class="rg" id="rg">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="exemplo@email.com" class="email" id="email">
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" class="senha" id="senha">
+
+        <label for="conf-senha">Confirmação de Senha:</label>
+        <input type="password" name="conf-senha" class="conf-senha" id="conf-senha">
+    </form>
+
+    <form class="endereco">
+        <h3>Endereço:</h3>
+
+        <label for="cep">CEP:</label>
+        <input type="text" maxlength="8" name="cep" class="cep" id="cep">
+
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" class="rua" id="rua">
+
+        <label for="numero">Número:</label>
+        <input type="text" name="numero" class="numero" id="numero">
+
+        <label for="complemento">Complemento:</label>
+        <input type="text" name="complemento" class="complemento" id="complemento">
+
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" class="bairro" id="bairro">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" class="cidade" id="cidade">
+
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" class="estado" id="estado">
+    </form>
+
+    <div class="mensagem" id="mensagem"></div>
+
+    <button class="botao-cadastrar" id="botao-cadastrar">Cadastrar</button>
+
+    <a href="login/login.html">Já tem uma conta? Acesse aqui!</a>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="cadastro.js"></script>
+</body>
+</html>
