@@ -20,7 +20,7 @@ function requisicao() {
     let arrid = ['tt1201607', 'tt0371746', 'tt3896198', 'tt0167260', 'tt2527338', 'tt2306299', 'tt0293429', 'tt0381707', 'tt1790864',
         'tt6320628', 'tt1392170', 'tt2283336']
 
-    for (let i = 0; i < arrid.length; i++) {
+    for (let i = 0; i < arrid.length; i++){
 
         let id = arrid[i]
 
