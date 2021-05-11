@@ -9,108 +9,66 @@ $('#btn').click(function(){
 function buscaFilme(){
 
 
-    var busca = $('#busca').val()
-    var url = "http://www.omdbapi.com/?apikey=f5e93ab6&s="
+    let busca = $('#busca').val()
+    let url = "http://www.omdbapi.com/?apikey=f5e93ab6&s="
 
-    $.ajax({
 
-        'url': url+busca ,
-   
+        
+        $.ajax({
+
+            'url': url+busca ,
     
-         'success': function(results)
-          {   
-            console.log(results)
-            var filmes = results.Search;
-
-            var salvarFilmes = "";
-           
-            try{
+        
+            'success': function(results)
+            {   
                 
-
-    
-    
-                $.each(filmes, (index, filme)=>{
+                let filmes = results.Search;
+                
+                for(let i = 0; i< filmes.length;i++){
                     
-                    salvarFilmes +=
-                    `    
-                    <h1>${filme.Title}</h1>
-                    <img src= "${filme.Poster}">
-                
-                   `
-                })
-                                
-                $('#filmes').html(` ${salvarFilmes}`)
-                
-      
-                if(results.Response=== "False"){
-
-
-                    throw new Error()
+                    $(`#filmes${i}`).html(`<img src = ${filmes[i].Poster}>`)
+                         id.push(filmes[i].imdbID)
+                       
                 }
- 
-            }
-            catch(err){
-
-    
-                if(results.Error== "Too many results."){
-                $('#filmes').html(` <h1>Sua busca trouxe muitos resultados, Seja mais específico!</h1>`)
-                }else
-                {
-                    $('#filmes').html(` <h1>Sua busca não trouxe nenhum resultado</h1>`)
-
-                    
-                }
-                console.log(err)
-            }
-           
-         }      
-})               
+                
+               
+            }      
+        })    
 }
-
+let id = [];
 
 
 
 $('.filmes').click(function () {
 
-    var busca = $('#busca').val()
-    var url = "http://www.omdbapi.com/?apikey=f5e93ab6&s="
-
-    $.ajax({
-
-        'url': url+busca ,
-
-
-        'success': function(results)
-        {   
-            let filmes = results.Search;
-            let salvamovie = "";
-            const indice = $(this).data('indice')
-
-            $('#myModal').modal('show')
-
+          
+        $('#myModal').modal('show')
            
+        let arr = id;
+        for(let i=0; i<arr.length;i++){
 
-        }
-     
-    })
+            var abc = arr[i]
+            
+        } 
+
+        criarObjeto(abc)
 
 })
 
 
-function criarObjeto(busca){
 
-    var busca = $('#busca').val()
-    var url = "http://www.omdbapi.com/?apikey=f5e93ab6&s="
+function criarObjeto(abc){
 
+    console.log(abc)
     $.ajax({
 
-        'url': url+busca ,
+        'url': `http://www.omdbapi.com/?i=${abc}&apikey=7ebfd47e `,
 
 
         'success': function(results)
         {   
-            const filme = dados(results)
-            mostra(filme)
+            const filmes = new Filme(results)
+            filmes.mostrar()
         }
      
     })
@@ -118,37 +76,32 @@ function criarObjeto(busca){
 
 
 
+class Filme {
 
-function dados(results){
+    constructor(results) {
 
+        this.img = results.Poster;
+        this.nome = results.Title;
+        this.ano = results.Year;
+        this.lancamento = results.Released;
+        this.duracao = results.Runtime;
+        this.genero = results.Genre;
+        this.diretor = results.Director;
+        this.nota = results.Metascore;
+    }
 
-    return {
+    mostrar(){
 
-        img: results.Poster,
-        Nome: results.name,
-        Ano: results.Year,
-        Lançamento: results.Released,
-        Duração: results.Runtime,
-        Gênero: results.Genre,
-        Diretor: results.Director,
-        Nota: results.imdbRating
-
-    }  
-   
+        $('.foto').attr("src", this.img)
+        $('.nome').text(this.nome)
+        $('.ano').text(this.ano)
+        $('.lancamento').text(this.lancamento)
+        $('.genero').text(this.genero) 
+        $('.duracao').text(this.duracao)
+        $('.diretor').text(this.diretor)
+        $('.nota').text(this.nota)   
+    }
 }
-
-function mostra(filme) {
-
-    $('.nome').text(filme.nome)
-    $('.foto').attr("src", filme.img)
-    $('.ano').text(filme.ano)
-    $('.lancamento').text(filme.lancamento)
-    $('.genero').text(filme.genero)
-    $('.duracao').text(filme.duracao)
-    $('.diretor').text(filme.diretor)
-    $('.nota').text(filme.nota)
-}
-
 
 
 
