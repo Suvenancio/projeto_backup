@@ -15,14 +15,11 @@
     height: 90px;
     line-height: 0;
 }
-.container-fluid > .logo{
-    text-decoration: none;
-    font-size: 22px;
-    color: rgb(255, 255, 255);
-}
+
 .navbar-nav.me-auto.mb-2.mb-lg-0 li a{
     color: rgb(230, 230, 230);
     font-family: monospace;
+    font-size: 19px;
     margin-left: 60px;       
     
 }
@@ -31,15 +28,18 @@
 }
 .form-control.me-2{
     font-family: monospace;
+    
 }
 .btn.btn-outline-success{
-    background-color: black;
+    background-color: rgba(32, 32, 32, 0.623);
+
     border: none;
-    color: gray;
+    color: rgb(148, 148, 148);
     
 }
 .btn.btn-outline-success:hover{
-    background-color: rgba(55, 114, 202, 0.808);
+    color: whitesmoke;
+    background-color: #23b5b5;
 }
 .carousel.slide{
     margin: 20px auto;
@@ -51,14 +51,6 @@
     justify-content: space-around;
     
 }
-.texto-chamada {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-    background-color: rgb(59, 59, 59);
-    color: blanchedalmond;
-}
-
 .btn.btn-primary{
     width: 160px;
     height: 35px;
@@ -66,7 +58,18 @@
     border: none;
     font-family: monospace;
     color: blanchedalmond;
-    background-color: cadetblue;
+    background-color: rgb(88, 184, 187);
+}
+.btn.btn-primary:hover{
+    background-color: #23b5b5;
+}
+.texto-chamada {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(59, 59, 59, 0.4);
+    color: blanchedalmond;
+    background-color: transparent 0.2;
 }
 .texto-chamada > .assinar :hover{
     width: 122px;
