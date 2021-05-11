@@ -21,16 +21,29 @@ function buscaFilme(){
         
             'success': function(results)
             {   
+                try{
+
+                    let filmes = results.Search;
+
+
+                    for(let i = 0; i< filmes.length;i++){
+                        
+                        $(`#filmes${i}`).html(`<img src = ${filmes[i].Poster}>`)
+                            id.push(filmes[i].imdbID)
+                        
+                    }
+
+
+                    if(results.Response=== "False"){
+                        throw new Error("Sua busca não trouxe nenhum resultado")
+                    }
+              }catch(err){
                 
-                let filmes = results.Search;
-                
-                for(let i = 0; i< filmes.length;i++){
-                    
-                    $(`#filmes${i}`).html(`<img src = ${filmes[i].Poster}>`)
-                         id.push(filmes[i].imdbID)
-                       
+                if(results.Response=== "False"){
+                    $('.filmes').html(` <h1>Sua busca não trouxe nenhum resultado</h1>`)
                 }
-                
+            
+              }
                
             }      
         })    
@@ -73,7 +86,6 @@ function criarObjeto(abc){
      
     })
 }
-
 
 
 class Filme {
