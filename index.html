@@ -12,6 +12,7 @@
 </head>
 <body onload="requisicao()" class="body">
   
+ 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light " >
         <div class="container-fluid">
@@ -34,7 +35,9 @@
                 <a class="nav-link active" href="#">Cadastrar</a>
               </li>
 
-              
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contato</a>
+              </li>
 
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Login</a>
@@ -53,31 +56,78 @@
         </div>
       </nav>
 
+      <div id="texto-chamada" class="texto-chamada">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="./img/tela.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item active">
+              <img src="./img/tela1.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item active">
+              <img src="./img/tela2.jpg" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-item active">
+              <img src="./img/tela3.jpg" class="d-block w-100" alt="...">
+            </div>
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">proximo</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">anterior</span>
+          </button>
+        </div>
+
+        <h1>Assista a filmes e séries</h1>
+        <p>Assine nosso canal de streaming e tenha acesso a mais de 1.000 títulos populares <h3>por apenas R$ 9,90 por mês</h3></p>
+        <button type="button" class="btn btn-primary">Assinar</button>
+      </div> 
+     
       <section id="todosfilmes" class="container">
-        <div class="row">
-        <div id="filmesexterna" class="col">
-            <div id="filmes0" class="filmes" data-indice="0"></div>
-            <div id="filmes1" class="filmes" data-indice="1"></div>
-            <div id="filmes2" class="filmes" data-indice="2"></div>
-            <div id="filmes3" class="filmes" data-indice="3"></div>
-        </div>
-        <div id="filmesexterna" class="col"> 
-            <div id="filmes4" class="filmes" data-indice="4"></div>
-            <div id="filmes5" class="filmes" data-indice="5"></div>
-            <div id="filmes6" class="filmes" data-indice="6"></div>
-            <div id="filmes7" class="filmes" data-indice="7"></div>
-        </div>
-        <div id="filmesexterna" class="col">
-            <div id="filmes8" class="filmes" data-indice="8"></div>
-            <div id="filmes9" class="filmes" data-indice="9"></div>
-            <div id="filmes10" class="filmes" data-indice="10"></div>
-            <div id="filmes11" class="filmes" data-indice="11"></div>
-        </div>
-        </div>
-    </section>
+
+          <div class="row">
+
+          <div id="filmesexterna" class="col">
+              <div id="filmes0" class="filmes" data-indice="0"></div>
+              <div id="filmes1" class="filmes" data-indice="1"></div>
+              <div id="filmes2" class="filmes" data-indice="2"></div>
+          </div>
+
+          <div id="filmesexterna" class="col"> 
+              <div id="filmes3" class="filmes" data-indice="3"></div>
+              <div id="filmes4" class="filmes" data-indice="4"></div>
+              <div id="filmes5" class="filmes" data-indice="5"></div>
+          </div>
+
+          <div id="filmesexterna" class="col">
+              <div id="filmes6" class="filmes" data-indice="6"></div>
+              <div id="filmes7" class="filmes" data-indice="7"></div>
+              <div id="filmes8" class="filmes" data-indice="8"></div>
+          </div>
+
+          <div id="filmesexterna" class="col">
+              <div id="filmes9" class="filmes" data-indice="9"></div>
+              <div id="filmes10" class="filmes" data-indice="10"></div>
+              <div id="filmes11" class="filmes" data-indice="11"></div>
+          </div>
+
+        </div><!--row-->
+      </section>
+   
    
 
-    <div class="container">
+
+    <div class="container" id="container-modal">
       <div class="row">
           <div class="col-md-12">
               <div class="modal fade" id="myModal">
@@ -88,16 +138,23 @@
                           </div>
                           <div class="modal-body">
                                 <img class="foto" src="" alt="" />
-                                <p>Ano: <span class="ano"></span></p>
-                                <p>Data de Lançamento: <span class="lancamento"></span></p>
-                                <p>Duração: <span class="duracao"></span></p>
-                                <p>Gênero: <span class="genero"></span></p>
-                                <p>Diretor: <span class="diretor"></span></p>
-                                <p>Metacritic: <span class="nota"></span></p>                          
+                                <div class="modal-text">
+
+                                  <p>Ano: <span class="ano"></span></p>
+                                  <p>Data de Lançamento: <span class="lancamento"></span></p>
+                                  <p>Duração: <span class="duracao"></span></p>
+                                  <p>Gênero: <span class="genero"></span></p>
+                                  <p>Diretor: <span class="diretor"></span></p>
+                                  <p>Metacritic: <span class="nota"></span></p>  
+                                    
+                                </div><!--modal-text-->                      
                           </div>
+
                           <div class="modal-footer">
-                              <input class="btn btn-default" data-dismiss="modal" value="Fechar">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                          
                           </div>
+
                       </div>
                   </div>
               </div>

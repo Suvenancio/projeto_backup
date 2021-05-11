@@ -5,24 +5,29 @@
 }
 .body{
     width: 100%;
-    background-color: teal;
+    background-color: rgb(73, 73, 73);
 }
-
+.navbar.navbar-expand-lg.navbar-light.bg-light{
+    padding: 0%;
+}
 .container-fluid{
     background-color: rgb(49, 49, 49);
-    height: 80px;
-    
+    height: 90px;
+    line-height: 0;
 }
 .container-fluid > .logo{
     text-decoration: none;
     font-size: 22px;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
 }
 .navbar-nav.me-auto.mb-2.mb-lg-0 li a{
-    color: whitesmoke;
+    color: rgb(230, 230, 230);
     font-family: monospace;
     margin-left: 60px;       
     
+}
+.navbar-nav.me-auto.mb-2.mb-lg-0 li a:hover{
+    color: rgb(255, 255, 255);
 }
 .form-control.me-2{
     font-family: monospace;
@@ -31,25 +36,64 @@
     background-color: black;
     border: none;
     color: gray;
-
+    
 }
-
-.modal-header{
+.btn.btn-outline-success:hover{
+    background-color: cyan;
+}
+.carousel.slide{
+    margin: 10px auto;
+    width: 100%;
+    height: 600px;
+    width: 90%;
+    background-size: contain;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.texto-chamada {
+    width: 100%;
     text-align: center;
-
+    background-color: rgb(59, 59, 59);
+}
+.btn.btn-primary{
+    width: 160px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-family: monospace;
+    color: blanchedalmond;
+    background-color: cadetblue;
+}
+.texto-chamada > .assinar :hover{
+    width: 122px;
+}
+section .col{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.imagem{
+    border-radius: 3%;
+    box-shadow: 10px 10px 10px rgb(88, 88, 88) ;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.imagem:hover{
+    transform: scale(1.1);
+}
+.btn.btn-outline-success :hover{
+    background-color: darkcyan;
+}
+.modal-header{
+    margin: 0 auto;
 }
 .modal-body{
     margin: 0 auto;
+    background-color: gray;
 }
-.imagem{
-    width: 250px;
-    height: 350px;
-    margin:10px;
-    border: 10px solid rgb(15, 15, 15)
-}
-.foto{
-    width: 200px;
-    height: 300px;
-    margin:10px;
-    border: 5px solid rgb(77, 75, 75);
+.modal-text > p{
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
 }
