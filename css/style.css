@@ -39,10 +39,10 @@
     
 }
 .btn.btn-outline-success:hover{
-    background-color: cyan;
+    background-color: rgba(55, 114, 202, 0.808);
 }
 .carousel.slide{
-    margin: 10px auto;
+    margin: 20px auto;
     width: 100%;
     height: 600px;
     width: 90%;
@@ -52,10 +52,13 @@
     
 }
 .texto-chamada {
+    margin-top: 20px;
     width: 100%;
     text-align: center;
     background-color: rgb(59, 59, 59);
+    color: blanchedalmond;
 }
+
 .btn.btn-primary{
     width: 160px;
     height: 35px;
@@ -85,6 +88,7 @@ section .col{
 .btn.btn-outline-success :hover{
     background-color: darkcyan;
 }
+
 .modal-header{
     margin: 0 auto;
 }
@@ -92,8 +96,16 @@ section .col{
     margin: 0 auto;
     background-color: gray;
 }
+.modal-body img{
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
 .modal-text > p{
     font-family: monospace;
     font-size: 15px;
     font-weight: bold;
+    text-transform: capitalize;
+    text-justify: newspaper;
 }
