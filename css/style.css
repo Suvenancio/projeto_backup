@@ -122,17 +122,26 @@ section .col{
 }
 .modal-text p{
     margin-top: 5px;
-    background-color: royalblue;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(46, 46, 46);
+    color: whitesmoke;
     text-align: center;
-
+    line-height: 20px;
 }
+
 
 .modal-footer{
     background-color:rgb(77, 77, 77) ;
 }
 .modal-footer > button{
-    background-color: rebeccapurple;
+    margin: 0 auto;
+    width: 20%;
+    background-color: rgb(93, 91, 95);
     border: none;
+    font-variant: small-caps;
+    font-family: monospace;
+    font-size: 22px;
 }
 .rodape{
     width: 100%;
