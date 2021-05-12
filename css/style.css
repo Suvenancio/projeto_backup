@@ -31,7 +31,7 @@
     
 }
 .btn.btn-outline-success{
-    background-color: rgba(32, 32, 32, 0.623);
+    background-color: rgba(32, 32, 32, 0.459);
 
     border: none;
     color: rgb(148, 148, 148);
@@ -57,8 +57,9 @@
     border-radius: 10px;
     border: none;
     font-family: monospace;
+    font-size: 18px;
     color: blanchedalmond;
-    background-color: rgb(88, 184, 187);
+    background-color: rgb(105, 153, 165)
 }
 .btn.btn-primary:hover{
     background-color: #23b5b5;
@@ -67,7 +68,7 @@
     margin-top: 20px;
     width: 100%;
     text-align: center;
-    background-color: rgb(59, 59, 59, 0.4);
+    background-color: rgba(66, 82, 87, 0.4);
     color: blanchedalmond;
     background-color: transparent 0.2;
 }
@@ -91,13 +92,23 @@ section .col{
 .btn.btn-outline-success :hover{
     background-color: darkcyan;
 }
-
+#myModal{
+    background-color: rgba(85, 85, 85, 0.507);
+    
+}
 .modal-header{
+    width: 100%;
     margin: 0 auto;
+    background-color: #299797;
+}
+.modal-header h3{
+    width: 100%;
+    text-align: center;
 }
 .modal-body{
     margin: 0 auto;
-    background-color: gray;
+    background-color: rgb(77, 77, 77);
+    width: 100%;
 }
 .modal-body img{
     width: 400px;
@@ -105,10 +116,35 @@ section .col{
     justify-content: space-around;
     margin: 0 auto;
 }
-.modal-text > p{
+.modal-text {
+    padding: 0 8%;
+    color: rgb(49, 49, 49);
+}
+.modal-text p{
+    margin-top: 5px;
+    background-color: royalblue;
+    text-align: center;
+
+}
+
+.modal-footer{
+    background-color:rgb(77, 77, 77) ;
+}
+.modal-footer > button{
+    background-color: rebeccapurple;
+    border: none;
+}
+.rodape{
+    width: 100%;
+    margin-top: 30px;
+    height: 80px;
+    background-color: rgb(49, 49, 49);
+    color: black;
+    text-align: center;
     font-family: monospace;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: capitalize;
-    text-justify: newspaper;
+    text-transform: uppercase;
+
+}
+.container-texto {
+    padding: 2% 0 0 0;
 }
